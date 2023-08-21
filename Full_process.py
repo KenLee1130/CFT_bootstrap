@@ -76,17 +76,6 @@ def Check_overfit(scale, step_size, ep_steps, episodes, Neurons):
         
         # Evaluate the trained agent
         mean_reward, std_reward = evaluate_policy(model, env=env, n_eval_episodes=episodes, deterministic=True)
-    # Normalize_upgrade = []
-    # data = pd.read_excel(f"C:/Users/User/Desktop/master/RL/CFT/CFT_data/Rewards_Neuron_{Neurons}_Eval.xlsx",
-    #                       header=None, names=[f'N:{Neurons}'])
-    # data = pd.DataFrame(data)
-    # for i in range(10000//100):
-    #     Normalize_upgrade.append(-(pd.DataFrame.max(data)-data[i*100+1: (i+1)*100+1].head(1))*100/ data[i*100+1: (i+1)*100+1].head(1))
-    # mean, std = np.mean(Normalize_upgrade), np.std(Normalize_upgrade)
-    # N_mean = mean
-    # N_std = std
-    
-    # return N_mean, N_std
 
 ####################################
 ep_steps_train = 200
