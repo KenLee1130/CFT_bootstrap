@@ -114,15 +114,7 @@ class CFT_Env_Eval(gym.Env):
         done = False
 
         self.Reward_collector.append(reward/self.scale)
-       
-        # Step size tunning
-        # if reward > self.ep_best_reward:
-        #     self.ep_best_reward = reward
-        #     self.step_size /= 1.005
-        #     self.ep_best_obs = np.concatenate((self.delta_list, self.ope_c_list))
-        #     reward /= 10**5
         reward, self.ep_best_reward, self.ep_worst_reward = self.Step_size_tunning(reward, self.ep_best_reward, self.ep_worst_reward)
-        #print('step_size: ',self.step_size)
 
         if reward > 0:
             reward *= 10 ** 5
