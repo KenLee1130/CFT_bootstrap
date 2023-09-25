@@ -87,13 +87,4 @@ def postInput():
 if __name__ == '__main__':
     
     app.run(host='0.0.0.0', port=3000, debug=True)
-# grid = 10000
-# spin_list = np.array([0., 0., 2., 4., 6.])
-# Select_delta = np.random.randint(0, grid, 5)/grid
-# delta_theta_list = Select_delta
 
-# Select_ope_c = np.random.randint(0, grid, 5)/grid
-# ope_c_list = Select_ope_c
-# spec = np.concatenate((spin_list, delta_theta_list, ope_c_list))
-
-# predict(spec, 'sac_cft_546_0')
